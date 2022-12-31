@@ -18,6 +18,7 @@ class Assertion(Generic[T]):
             # TODO regex this shiet?
             return (
                 funcString
+                .partition("#")[0] # same-line comment
                 .replace("\\n", "")
                 .replace("'", "")
                 .replace("[", "")
